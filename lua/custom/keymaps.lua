@@ -1,6 +1,7 @@
 vim.o.expandtab = true
 vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
+vim.o.smartindent = true
 vim.o.colorcolumn = '100'
 vim.o.wrap = false
 
