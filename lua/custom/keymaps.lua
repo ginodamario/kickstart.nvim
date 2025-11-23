@@ -2,6 +2,7 @@ vim.o.expandtab = true
 vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.colorcolumn = '100'
+vim.o.wrap = false
 
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<CR>', { desc = 'Quit all' })
 vim.keymap.set('n', '<leader>wa', '<cmd>wa<CR>', { desc = 'Write all' })
