@@ -61,4 +61,25 @@ return {
       },
     },
   },
+
+  {
+    'chrisgrieser/nvim-rip-substitute',
+    cmd = 'RipSubstitute',
+    opts = {},
+    keys = {
+      {
+        '<leader>rs',
+        function()
+          require('rip-substitute').sub()
+        end,
+        mode = { 'n', 'x' },
+        desc = 'rip substitute',
+      },
+    },
+  },
+  {
+    'cameron-wags/rainbow_csv.nvim',
+    ft = { 'csv', 'tsv', 'csv_semicolon', 'csv_whitespace', 'csv_pipe', 'rfc_csv', 'rfc_semicolon' },
+    config = true, -- uses default config
+  },
 }
