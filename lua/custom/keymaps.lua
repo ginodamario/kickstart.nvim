@@ -45,3 +45,13 @@ vim.keymap.set('n', '<leader>sm', function()
     symbol_width = 50,
   }
 end, { desc = 'Search Functions/Methods' })
+
+vim.keymap.set('n', '<leader>tt', function()
+  local file = vim.fn.expand '%:p' -- full path of current file
+  local line = tostring(vim.fn.line '.')
+
+  -- fire and forget (doesn't block Neovim)
+  vim.fn.jobstart({ 'blame2', file, line }, {
+    detach = true,
+  })
+end, { desc = 'Launch tig blame' })
