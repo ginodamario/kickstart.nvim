@@ -16,6 +16,8 @@ vim.keymap.set('n', 'go', '<cmd>LspClangdSwitchSourceHeader<CR>', { desc = 'Swit
 vim.keymap.set({ 'n', 'v' }, 'gl', '$', { desc = 'Goto end of line' })
 vim.keymap.set({ 'n', 'v' }, 'gh', '0', { desc = 'Goto start of line' })
 vim.keymap.set({ 'n', 'v' }, 'gs', '^', { desc = 'Goto first non-blank line' })
+vim.keymap.set('n', 'L', '<cmd>tabnext<CR>', { desc = 'Tab next' })
+vim.keymap.set('n', 'H', '<cmd>tabprev<CR>', { desc = 'Tab prev' })
 
 vim.keymap.set('n', '<leader>v', '`[v`]', { desc = 'Select last paste/change' })
 
