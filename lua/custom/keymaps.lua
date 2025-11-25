@@ -16,6 +16,8 @@ vim.keymap.set('n', 'gl', '$', { desc = 'Goto end of line' })
 vim.keymap.set('n', 'gh', '0', { desc = 'Goto start of line' })
 vim.keymap.set('n', 'gs', '^', { desc = 'Goto first non-blank line' })
 
+vim.keymap.set('n', '<leader>v', '`[v`]', { desc = 'Select last paste/change' })
+
 -- Close the buffer without closing the split.
 vim.keymap.set('n', '<leader>c', function()
   require('mini.bufremove').delete(0)
