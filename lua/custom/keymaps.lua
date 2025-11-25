@@ -13,9 +13,9 @@ vim.keymap.set('n', '<leader>wv', '<cmd>vs<CR>', { desc = 'Split vertical' })
 vim.keymap.set('n', '<leader>ws', '<cmd>sp<CR>', { desc = 'Split horizontal' })
 vim.keymap.set('n', '<leader>wc', '<cmd>q<CR>', { desc = 'Window close' })
 vim.keymap.set('n', 'go', '<cmd>LspClangdSwitchSourceHeader<CR>', { desc = 'Switch source header' })
-vim.keymap.set('n', 'gl', '$', { desc = 'Goto end of line' })
-vim.keymap.set('n', 'gh', '0', { desc = 'Goto start of line' })
-vim.keymap.set('n', 'gs', '^', { desc = 'Goto first non-blank line' })
+vim.keymap.set({ 'n', 'v' }, 'gl', '$', { desc = 'Goto end of line' })
+vim.keymap.set({ 'n', 'v' }, 'gh', '0', { desc = 'Goto start of line' })
+vim.keymap.set({ 'n', 'v' }, 'gs', '^', { desc = 'Goto first non-blank line' })
 
 vim.keymap.set('n', '<leader>v', '`[v`]', { desc = 'Select last paste/change' })
 
