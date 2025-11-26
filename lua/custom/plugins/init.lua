@@ -84,6 +84,24 @@ return {
   {
     'esmuellert/vscode-diff.nvim',
     dependencies = { 'MunifTanjim/nui.nvim' },
+    config = function()
+      require('vscode-diff').setup {
+        -- Keymaps in diff view
+        keymaps = {
+          view = {
+            next_hunk = ']c', -- Jump to next change
+            prev_hunk = '[c', -- Jump to previous change
+            next_file = '<tab>', -- Next file in explorer mode
+            prev_file = '<s-tab>', -- Previous file in explorer mode
+          },
+          explorer = {
+            select = '<CR>', -- Open diff for selected file
+            hover = 'K', -- Show file diff preview
+            refresh = 'R', -- Refresh git status
+          },
+        },
+      }
+    end,
   },
   {
     'chrisgrieser/nvim-spider',
