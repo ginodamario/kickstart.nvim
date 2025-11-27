@@ -37,6 +37,8 @@ vim.keymap.set('n', '<leader>td', function()
   vim.diagnostic.config { virtual_text = not current }
 end, { desc = 'Toggle diagnostics' })
 
+vim.keymap.set('n', '<leader>d', '<Cmd>lua vim.diagnostic.open_float()<CR>', { desc = 'Show diagnostic popup' })
+
 -- Trim white spaces at end of the line
 local function trim_trailing_whitespace()
   local view = vim.fn.winsaveview()

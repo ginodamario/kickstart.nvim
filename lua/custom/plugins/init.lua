@@ -89,6 +89,8 @@ return {
         -- Keymaps in diff view
         keymaps = {
           view = {
+            quit = "q",                    -- Close diff tab
+            toggle_explorer = "<leader>b",  -- Toggle explorer visibility (explorer mode only)
             next_hunk = ']c', -- Jump to next change
             prev_hunk = '[c', -- Jump to previous change
             next_file = '<tab>', -- Next file in explorer mode
