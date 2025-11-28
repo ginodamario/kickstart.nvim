@@ -686,7 +686,18 @@ require('lazy').setup({
         clangd = {},
         -- gopls = {},
         ruff = {},
-        pyright = {},
+        pylsp = {
+          settings = {
+            plugins = {
+              pycodestyle = {
+                maxLineLength = 100
+              },
+              flake8 = {
+                maxLineLength = 100
+              }
+            }
+          }
+        },
         rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
