@@ -690,13 +690,13 @@ require('lazy').setup({
           settings = {
             plugins = {
               pycodestyle = {
-                maxLineLength = 100
+                maxLineLength = 100,
               },
               flake8 = {
-                maxLineLength = 100
-              }
-            }
-          }
+                maxLineLength = 100,
+              },
+            },
+          },
         },
         rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -1011,9 +1011,9 @@ require('lazy').setup({
       max_lines = 2,
     },
   },
-  {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-  },
+  -- {
+  --   'nvim-treesitter/nvim-treesitter-textobjects',
+  -- },
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
