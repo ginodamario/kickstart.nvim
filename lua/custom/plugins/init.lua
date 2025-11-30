@@ -106,6 +106,21 @@ return {
     end,
   },
   {
+    -- Diff against clipboard. Uses vscode diff if available.
+    'jake-stewart/diff.nvim',
+    cmd = 'Diff',
+    opts = {
+      -- show a unified diff (single pane)
+      unified = false,
+
+      -- either "tab", "above", "below", "left", or "right"
+      position = 'below',
+
+      -- show the cursorline within the diff windows
+      cursorline = false,
+    },
+  },
+  {
     'chrisgrieser/nvim-spider',
     keys = {
       { 'W', "<cmd>lua require('spider').motion('w')<CR>", mode = { 'n', 'o', 'x' } },
