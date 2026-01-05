@@ -53,6 +53,12 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   callback = trim_trailing_whitespace,
 })
 
+vim.api.nvim_create_autocmd("VimResized", {
+  callback = function()
+    vim.cmd("wincmd =")
+  end,
+})
+
 vim.keymap.set('n', '<leader>sm', function()
   require('telescope.builtin').lsp_document_symbols {
     symbols = { 'function', 'method' },
