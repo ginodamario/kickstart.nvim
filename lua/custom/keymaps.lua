@@ -20,7 +20,7 @@ vim.keymap.set('n', 'go', '<cmd>LspClangdSwitchSourceHeader<CR>', { desc = 'Swit
 vim.keymap.set({ 'n', 'v' }, 'gl', '$', { desc = 'Goto end of line' })
 vim.keymap.set({ 'n', 'v' }, 'gh', '0', { desc = 'Goto start of line' })
 vim.keymap.set({ 'n', 'v' }, 'gs', '^', { desc = 'Goto first non-blank line' })
-vim.keymap.set({ 'n', 'v' }, 'mm', '%', { desc = 'Jump to matching brace'})
+vim.keymap.set({ 'n', 'v' }, 'mm', '%', { desc = 'Jump to matching brace' })
 
 vim.keymap.set('n', 'L', '<cmd>tabnext<CR>', { desc = 'Tab next' })
 vim.keymap.set('n', 'H', '<cmd>tabprev<CR>', { desc = 'Tab prev' })
@@ -53,9 +53,9 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   callback = trim_trailing_whitespace,
 })
 
-vim.api.nvim_create_autocmd("VimResized", {
+vim.api.nvim_create_autocmd('VimResized', {
   callback = function()
-    vim.cmd("wincmd =")
+    vim.cmd 'wincmd ='
   end,
 })
 
@@ -65,6 +65,13 @@ vim.keymap.set('n', '<leader>sm', function()
     symbol_width = 50,
   }
 end, { desc = 'Search Functions/Methods' })
+
+vim.keymap.set('n', '<leader>se', function()
+  require('telescope.builtin').lsp_document_symbols {
+    symbols = { 'struct', 'enum' },
+    symbol_width = 50,
+  }
+end, { desc = 'Search [E]num/Structs' })
 
 vim.keymap.set('n', '<leader>tt', function()
   local file = vim.fn.expand '%:p' -- full path of current file
