@@ -686,18 +686,19 @@ require('lazy').setup({
         clangd = {},
         -- gopls = {},
         ruff = {},
-        pylsp = {
-          settings = {
-            plugins = {
-              pycodestyle = {
-                maxLineLength = 100,
-              },
-              flake8 = {
-                maxLineLength = 100,
-              },
-            },
-          },
-        },
+        ty = {},
+        -- pylsp = {
+        --   settings = {
+        --     plugins = {
+        --       pycodestyle = {
+        --         maxLineLength = 100,
+        --       },
+        --       flake8 = {
+        --         maxLineLength = 100,
+        --       },
+        --     },
+        --   },
+        -- },
         -- rust_analyzer = {
         --   check = {
         --     command = 'clippy',
