@@ -53,6 +53,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   callback = trim_trailing_whitespace,
 })
 
+-- Auto resize windows equally.
 vim.api.nvim_create_autocmd('VimResized', {
   callback = function()
     vim.cmd 'wincmd ='
