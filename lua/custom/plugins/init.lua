@@ -99,7 +99,7 @@ return {
     'esmuellert/vscode-diff.nvim',
     dependencies = { 'MunifTanjim/nui.nvim' },
     config = function()
-      require('vscode-diff').setup {
+      require('codediff').setup {
         -- Keymaps in diff view
         keymaps = {
           view = {
