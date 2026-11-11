@@ -827,8 +827,8 @@ require('lazy').setup({
         --
         -- No, but seriously. Please read `:help ins-completion`, it is really good!
         --
-        -- All presets have the following mappings:
-        -- <tab>/<s-tab>: move to right/left of your snippet expansion
+        -- Presets include these mappings (Tab is overridden below):
+        -- <tab>/<s-tab>: move to next/previous snippet field
         -- <c-space>: Open menu or open docs if already open
         -- <c-n>/<c-p> or <up>/<down>: Select next/previous item
         -- <c-e>: Hide menu
@@ -837,6 +837,12 @@ require('lazy').setup({
         -- See :h blink-cmp-config-keymap for defining your own keymap
         -- GINO:
         preset = 'enter',
+
+        -- Keep Tab for indentation, even when a snippet is still active.
+        ['<Tab>'] = false,
+        ['<S-Tab>'] = false,
+        ['<M-l>'] = { 'snippet_forward', 'fallback' },
+        ['<M-h>'] = { 'snippet_backward', 'fallback' },
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
